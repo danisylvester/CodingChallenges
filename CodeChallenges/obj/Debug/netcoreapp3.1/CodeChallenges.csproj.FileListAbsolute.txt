@@ -1,0 +1,13 @@
+C:\Users\Dani\source\repos\CodeChallenges\CodeChallenges\bin\Debug\netcoreapp3.1\CodeChallenges.exe
+C:\Users\Dani\source\repos\CodeChallenges\CodeChallenges\bin\Debug\netcoreapp3.1\CodeChallenges.deps.json
+C:\Users\Dani\source\repos\CodeChallenges\CodeChallenges\bin\Debug\netcoreapp3.1\CodeChallenges.runtimeconfig.json
+C:\Users\Dani\source\repos\CodeChallenges\CodeChallenges\bin\Debug\netcoreapp3.1\CodeChallenges.runtimeconfig.dev.json
+C:\Users\Dani\source\repos\CodeChallenges\CodeChallenges\bin\Debug\netcoreapp3.1\CodeChallenges.dll
+C:\Users\Dani\source\repos\CodeChallenges\CodeChallenges\bin\Debug\netcoreapp3.1\CodeChallenges.pdb
+C:\Users\Dani\source\repos\CodeChallenges\CodeChallenges\obj\Debug\netcoreapp3.1\CodeChallenges.csprojAssemblyReference.cache
+C:\Users\Dani\source\repos\CodeChallenges\CodeChallenges\obj\Debug\netcoreapp3.1\CodeChallenges.AssemblyInfoInputs.cache
+C:\Users\Dani\source\repos\CodeChallenges\CodeChallenges\obj\Debug\netcoreapp3.1\CodeChallenges.AssemblyInfo.cs
+C:\Users\Dani\source\repos\CodeChallenges\CodeChallenges\obj\Debug\netcoreapp3.1\CodeChallenges.csproj.CoreCompileInputs.cache
+C:\Users\Dani\source\repos\CodeChallenges\CodeChallenges\obj\Debug\netcoreapp3.1\CodeChallenges.dll
+C:\Users\Dani\source\repos\CodeChallenges\CodeChallenges\obj\Debug\netcoreapp3.1\CodeChallenges.pdb
+C:\Users\Dani\source\repos\CodeChallenges\CodeChallenges\obj\Debug\netcoreapp3.1\CodeChallenges.genruntimeconfig.cache
