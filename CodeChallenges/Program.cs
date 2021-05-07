@@ -8,7 +8,8 @@ namespace CodeChallenges
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(ReverseNumber(-19));
+            int[] nums = new int[] { 3, 2, 5, 1 };
+             Console.WriteLine(GetGreatestNum(nums));
         }
 
         // Unscramble a string by comparing it to a list of strings
@@ -93,7 +94,7 @@ namespace CodeChallenges
             }
         }
 
-        // Reverse the order of an int
+        // Reverses the order of an int and returns 0 if there's an overflow exception
         static int ReverseNumber(int num)
         {
             try
@@ -117,6 +118,13 @@ namespace CodeChallenges
             {
                 return 0;
             }
+        }
+
+        // Return the greatest numnber
+        static int GetGreatestNum(int[] input)
+        {
+            List<int> inputArr = input.OrderBy(n => n).ToList();
+            return inputArr[inputArr.Count() - 1];
         }
 
     }
