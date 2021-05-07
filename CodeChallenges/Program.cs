@@ -8,9 +8,10 @@ namespace CodeChallenges
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(GetLongestSubstring("abacdaacdesf"));
+            Console.WriteLine(ReverseNumber(-19));
         }
 
+        // Unscramble a string by comparing it to a list of strings
         static List<string> Unscramble(string input, string[] options)
         {
             string sortedInput = new string(input.OrderBy(c => c).ToArray());
@@ -28,6 +29,7 @@ namespace CodeChallenges
             return result;
         }
 
+        // helper function for GetLongestSubstring
         static char? GetDuplicate(List<char> arr)
         {
             var duplicates = arr.GroupBy(c => c)
@@ -37,7 +39,7 @@ namespace CodeChallenges
             char? result = null;
             return duplicates.Count() == 0 ? result : duplicates[0];
         }
-
+        // Returns the length of the longest substring without repeating values from a string input
         static int GetLongestSubstring(string input)
         {
             char[] inputArr = input.ToCharArray();
@@ -65,5 +67,57 @@ namespace CodeChallenges
             }
             return maxLength;
         }
+
+        // Returns the median value of two int arrays
+        static double GetMedian(int[] arrOne, int[] arrTwo)
+        {
+            List<int> numsArr = new List<int>();
+            numsArr.AddRange(arrOne);
+            numsArr.AddRange(arrTwo);
+
+            var sortedNums = numsArr.OrderBy(n => n).ToList();
+
+            if(sortedNums.Count() % 2 != 0)
+            {
+                double half = sortedNums.Count() / 2;
+                int mid = (int)Math.Floor(half);
+                return sortedNums[mid];
+            } else
+            {
+                int secondIndex = sortedNums.Count() / 2;
+                double num1 = sortedNums[secondIndex - 1];
+                double num2 = sortedNums[secondIndex];
+
+                double result = (num1 + num2) / 2;
+                return result; 
+            }
+        }
+
+        // Reverse the order of an int
+        static int ReverseNumber(int num)
+        {
+            try
+            {
+                string newString = "";
+             
+                if(num < 0)
+                {
+                    newString = "-";
+                    num = Math.Abs(num);
+                }
+                string input = num.ToString();
+                for(int i = input.Length - 1; i >= 0; i--)
+                {
+                    newString += input[i];
+                }
+                int result = Int32.Parse(newString);
+                return result;
+            }
+            catch(Exception)
+            {
+                return 0;
+            }
+        }
+
     }
 }
