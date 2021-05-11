@@ -8,8 +8,7 @@ namespace CodeChallenges
     {
         static void Main(string[] args)
         {
-            int[] nums = new int[] { 3, 2, 5, 1 };
-             Console.WriteLine(GetGreatestNum(nums));
+            Console.WriteLine(isPalindrome(-989));
         }
 
         // Unscramble a string by comparing it to a list of strings
@@ -125,6 +124,16 @@ namespace CodeChallenges
         {
             List<int> inputArr = input.OrderBy(n => n).ToList();
             return inputArr[inputArr.Count() - 1];
+        }
+
+        // Determines if a number is a palindrome
+        static bool isPalindrome(int n)
+        {
+            string input = n.ToString();
+            char[] inputArr = input.ToCharArray();
+            Array.Reverse(inputArr);
+            string reversed = new string(inputArr);
+            return input == reversed;
         }
 
     }
