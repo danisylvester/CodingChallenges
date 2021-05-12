@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace CodeChallenges
 {
@@ -8,7 +9,7 @@ namespace CodeChallenges
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(isPalindrome(-989));
+            Console.WriteLine(Atoi("   -42"));
         }
 
         // Unscramble a string by comparing it to a list of strings
@@ -134,6 +135,67 @@ namespace CodeChallenges
             Array.Reverse(inputArr);
             string reversed = new string(inputArr);
             return input == reversed;
+        }
+
+        // Parse string to int. 
+        static int Atoi(string input)
+        {
+            char[] inputArr = input.ToCharArray();   
+            byte[] asciiValues = Encoding.ASCII.GetBytes(input);
+            StringBuilder temp = new StringBuilder();
+            bool numDetected = false;
+            bool isNegative = false;
+            for(int i = 0; i < inputArr.Length; i++)
+            {
+                if(!numDetected && asciiValues[i] == 43)
+                {
+                    temp.Append(inputArr[i]);
+                    continue;
+                }
+                if (!numDetected && asciiValues[i] == 45)
+                {
+                    temp.Append(inputArr[i]);
+                    isNegative = true;
+                    continue;
+                }
+                if (asciiValues[i] >= 48 && asciiValues[i] <= 57)
+                {
+                    temp.Append(inputArr[i]);
+                    numDetected = true;
+                } else
+                {
+                    if(!numDetected && asciiValues[i] != 32)
+                    {
+                        break;
+                    }
+                    if (numDetected)
+                    {
+                        break;
+                    }
+
+                }
+            }
+            int result;
+            try
+            {
+                result = Int32.Parse(temp.ToString());
+            }
+            catch (OverflowException)
+            {
+                if (isNegative)
+                {
+                    result = Int32.MinValue;
+                } else
+                {
+                    result = Int32.MaxValue;
+                }
+
+            }
+            catch(Exception)
+            {
+                result = 0;
+            }
+            return result;
         }
 
     }
