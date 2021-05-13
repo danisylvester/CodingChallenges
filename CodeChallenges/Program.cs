@@ -9,7 +9,9 @@ namespace CodeChallenges
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Atoi("   -42"));
+            int[] nums = new int[] { 1, 2, 3, 4, 5, 8, 10 };
+            int target = 8;
+            Console.WriteLine(Algorithms.FindIndexOf(nums, target));
         }
 
         // Unscramble a string by comparing it to a list of strings
