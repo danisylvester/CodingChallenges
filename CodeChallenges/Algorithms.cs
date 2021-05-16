@@ -10,7 +10,7 @@ namespace CodeChallenges
         public static int FindIndexOf(int[] nums, int target)
         {
             int min = 0;
-            int max = nums.Length;
+            int max = nums.Length -1;
             int mid = max / 2;
 
             while(min <= max)
@@ -19,18 +19,16 @@ namespace CodeChallenges
                 if(target == nums[mid])
                 {
                     return mid;
-                }
-                if(target < nums[mid])
+                } 
+                if(target > nums[mid])
                 {
-                    max = mid - 1;
+                    min = mid + 1;
                 } else
                 {
-                    min = mid -1;
+                    max = mid + 1;
                 }
-                
             }
             return mid;
-
         }
     }
 }

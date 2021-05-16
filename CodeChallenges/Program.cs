@@ -9,9 +9,15 @@ namespace CodeChallenges
     {
         static void Main(string[] args)
         {
-            int[] nums = new int[] { 1, 2, 3, 4, 5, 8, 10 };
-            int target = 8;
-            Console.WriteLine(Algorithms.FindIndexOf(nums, target));
+            // 0 1 1 2 3 5 8 13
+            Console.WriteLine(Fibb(1));
+            Console.WriteLine(Fibb(2));
+            Console.WriteLine(Fibb(3));
+            Console.WriteLine(Fibb(4));
+            Console.WriteLine(Fibb(5));
+            Console.WriteLine(Fibb(6));
+            Console.WriteLine(Fibb(7));
+            Console.WriteLine(Fibb(8));
         }
 
         // Unscramble a string by comparing it to a list of strings
@@ -199,6 +205,24 @@ namespace CodeChallenges
             }
             return result;
         }
+        
+        static int Fibb(int position)
+        {
+            if(position == 1)
+            {
+                return 0;
+            }
+            int[] arr = new int[] { 0, 1 };
+            int newNum;
 
+            for(int i = 2; i < position; i++)
+            {
+                newNum = arr[0] + arr[1];
+                arr[0] = arr[1];
+                arr[1] = newNum;
+            }
+
+            return arr[1];
+        }
     }
 }
