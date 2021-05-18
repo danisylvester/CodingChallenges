@@ -10,10 +10,11 @@ namespace CodeChallenges
         static void Main(string[] args)
         {
             int[] input = new int[] { 5, 0, 2, 1, 4, 3 };
-            int[] result = Algorithms.SortNums(input);
-            foreach(int num in result)
+
+            var result = KidsWithCandies(input, 1);
+            foreach(bool n in result)
             {
-                Console.WriteLine(num);
+                Console.WriteLine(n);
             }
             
         }
@@ -222,5 +223,26 @@ namespace CodeChallenges
 
             return arr[1];
         }
+        
+        static IList<bool> KidsWithCandies(int[] candies, int extra)
+        {
+            int greatest = candies.Max();
+            bool[] result = new bool[candies.Length];
+
+            for(int i = 0; i < candies.Length; i++)
+            {
+                if(candies[i] + extra >= greatest)
+                {
+                    result[i] = true;
+                }
+                else
+                {
+                    result[i] = false;
+                }
+            }
+            return result;
+
+        }
+        
     }
 }
