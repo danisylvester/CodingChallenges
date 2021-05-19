@@ -9,13 +9,8 @@ namespace CodeChallenges
     {
         static void Main(string[] args)
         {
-            int[] input = new int[] { 5, 0, 2, 1, 4, 3 };
-
-            var result = KidsWithCandies(input, 1);
-            foreach(bool n in result)
-            {
-                Console.WriteLine(n);
-            }
+            string input = "hello";
+            Console.WriteLine(ReverseString(input));
             
         }
 
@@ -244,5 +239,20 @@ namespace CodeChallenges
 
         }
         
+        static string ReverseStringLooping(string input)
+        {
+            string result = "";
+            for(int i = input.Length - 1; i >= 0; i--)
+            {
+                result += input[i];
+            }
+            return result;
+        }
+        static string ReverseString(string input)
+        {
+            char[] inputArr = input.ToCharArray();
+            Array.Reverse(inputArr);
+            return new string(inputArr);
+        }
     }
 }
