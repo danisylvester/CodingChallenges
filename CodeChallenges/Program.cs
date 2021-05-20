@@ -9,8 +9,7 @@ namespace CodeChallenges
     {
         static void Main(string[] args)
         {
-            string input = "hello";
-            Console.WriteLine(ReverseString(input));
+            FizzBuzz(20);
             
         }
 
@@ -253,6 +252,32 @@ namespace CodeChallenges
             char[] inputArr = input.ToCharArray();
             Array.Reverse(inputArr);
             return new string(inputArr);
+        }
+
+        static void FizzBuzz(int num)
+        {
+            for(int i = 1; i <= num; i++)
+            {
+                if(i % 3 == 0 && i % 5 == 0)
+                {
+                    Console.WriteLine("FizzBuzz");
+                    continue;
+                }
+                else if(i % 3 == 0)
+                {
+                    Console.WriteLine("Fizz");
+                    continue;
+                } 
+                else if(i % 5 == 0)
+                {
+                    Console.WriteLine("Buzz");
+                    continue;
+                }
+                else
+                {
+                    Console.WriteLine(i);
+                }
+            }
         }
     }
 }
